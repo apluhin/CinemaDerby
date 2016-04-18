@@ -78,7 +78,7 @@ public class CinemaMonitorTest {
         cinema.addHall(5,5);
         cinema.addSeances("Film", LocalDateTime.of(2010, 10, 10, 20, 30), cinema.listHall().get(0).num, 100, 20);
         cinema.addSeances("Film1", LocalDateTime.of(2010,10,10,20,30), cinema.listHall().get(0).num, 100,20);
-        List<Seance> seances = cinema.search(null, null, null, null, null);
+        List<Seance> seances = cinema.search(null, LocalDateTime.now(), null, null, null);
         cinema.addReserve(1,1,1,seances.get(0).id);
         cinema.addReserve(1,1,1,seances.get(0).id);
 

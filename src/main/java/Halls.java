@@ -3,7 +3,7 @@
  */
 public class Halls {
     public final int num;
-    public final int  row;
+    public final int row;
     public final int seats;
 
     public Halls(int num, int row, int seats) {
@@ -14,7 +14,7 @@ public class Halls {
 
     @Override
     public String toString() {
-        return "Hall " +  num +
+        return "Hall " + num +
 
                 " { row=" + row +
                 ", seats=" + seats +

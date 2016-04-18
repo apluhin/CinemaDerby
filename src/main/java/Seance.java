@@ -6,12 +6,12 @@ import java.util.Date;
  * Created by aleksejpluhin on 10.03.16.
  */
 public class Seance {
-    public final int id;
-    public final String nameFilm;
-    public final LocalDateTime time;
-    public final int hall;
-    public final double price;
-    public final int age;
+    public int id;
+    public String nameFilm;
+    public LocalDateTime time;
+    public int hall;
+    public double price;
+    public int age;
 
 
     public Seance(int id, String nameFilm, LocalDateTime time, int hall, double price, int age) {
@@ -24,8 +24,57 @@ public class Seance {
 
     }
 
+    public Seance() {
 
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getNameFilm() {
+        return nameFilm;
+    }
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public int getHall() {
+        return hall;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNameFilm(String nameFilm) {
+        this.nameFilm = nameFilm;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
+
+    public void setHall(int hall) {
+        this.hall = hall;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     @Override
     public String toString() {
@@ -38,4 +87,5 @@ public class Seance {
                 ", age=" + age +
                 '}';
     }
+
 }

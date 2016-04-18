@@ -1,3 +1,4 @@
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -8,13 +9,27 @@ import java.util.List;
  */
 public interface CinemaMonitor {
 
-    public List<Seance> search(String film, LocalDateTime stime, Integer hall, Integer age, Double price) throws SQLException;
-    public void addHall(int nRows, int seats) throws SQLException;
-    public List<Halls> listHall() throws SQLException;
-    public void addSeances(String name, LocalDateTime time, int hall, int age, double price) throws SQLException;
-    public void addReserve(int row, int seat, int user_id, int seance) throws SQLException;
-    public void shutdown();
+     List<Seance> search(String film, LocalDateTime stime, Integer hall, Integer age, Double price) throws SQLException;
 
+     void addHall(int nRows, int seats) throws SQLException;
+
+     List<Halls> listHall() throws SQLException;
+
+     void addSeances(String name, LocalDateTime time, int hall, int age, double price) throws SQLException;
+
+     void addReserve(int row, int seat, int user_id, int seance) throws SQLException;
+
+     void shutdown();
+
+     void clearSeances() throws SQLException;
+
+     List<Reservation> reservations(int idSeances) throws SQLException;
+
+     Halls getHall(int idHall) throws SQLException;
+
+     List<Seance> listSeance() throws SQLException;
+
+    List<Reservation> getReservation() throws SQLException;
 
 
 }
