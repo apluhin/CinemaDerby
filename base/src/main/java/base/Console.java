@@ -1,4 +1,5 @@
-import java.sql.Connection;
+package base;
+
 import java.sql.SQLException;
 
 /**
