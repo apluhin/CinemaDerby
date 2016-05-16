@@ -183,6 +183,14 @@ public class Cinema implements CinemaMonitor {
         return reservations;
     }
 
+    @Override
+    public void deleteSeance(int id) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM SEANCES WHERE id = ?");
+        preparedStatement.setInt(1,id);
+        preparedStatement.execute();
+        preparedStatement.clearParameters();
+    }
+
 
     public void shutdown() {
         try {

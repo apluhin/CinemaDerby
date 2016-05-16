@@ -31,5 +31,5 @@ public interface CinemaMonitor {
 
     List<Reservation> getReservation() throws SQLException;
 
-
+     void deleteSeance(int id) throws SQLException;
 }

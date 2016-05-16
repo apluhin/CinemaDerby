@@ -3,7 +3,7 @@ package base;
 /**
  * Created by aleksejpluhin on 21.03.16.
  */
-public class Halls {
+public class Halls  {
     public final int num;
     public final int row;
     public final int seats;
@@ -13,6 +13,8 @@ public class Halls {
         this.row = row;
         this.seats = seats;
     }
+
+
 
     @Override
     public String toString() {
