@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<table border="1" >
+    <tr><td>Имя</td><td>Рядов</td><td>Мест</td></tr>
+    #foreach( $hall in ${hallList} )
+    <tr><td>${hall.name}</td><td>${hall.nrows}</td><td>${hall.seats}</td></tr>
+    #end
+</table>
+<br/>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Имя зала:</td>
+            <td><input name="name"></td>
+        </tr>
+        <tr>
+            <td>Количество мест:</td>
+            <td><input name="nrows"></td>
+        </tr>
+        <tr>
+            <td>Количество рядов:</td>
+            <td><input name="seats"></td>
+        </tr>
+    </table>
+    <input type="submit" value="OK">
+</form>
+
+#if ( $name )
+Зал $name создан!
+#end
+
+</body>
+</html>
